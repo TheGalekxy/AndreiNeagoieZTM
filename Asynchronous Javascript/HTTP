@@ -1,0 +1,4 @@
+GET - Get and HTML File
+POST - I want to post something, I'm going to send some data over and I want you to add it to your server
+PUT - I'm going to send you data and I want you to update the data you already have in your servers
+DELETE - Delete a piece of data in the server

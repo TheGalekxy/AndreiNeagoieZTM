@@ -1,0 +1,10 @@
+AJAX allows you to read from the webserver after the page has loaded and update the webpage without reloading the page, while sending data in the background while the user is interacting with it.
+AJAX allows webpage's and webapps to change content dynamically.
+
+fetch()
+
+promise is saying that fetch is making a request somewhere on the internet and it 'promises' to let you know when the value is returned.
+to access promises you use '.then()'
+fetch(URL).then(response => console.log(response))
+fetch(URL).then(response => response.json())  ----- Adding the .json converts it into readable but we just get the promise now
+fetch(URL).then(response => response.json()).then(data => console.log(data)); ---- adding the then allows us to access the promised data

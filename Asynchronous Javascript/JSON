@@ -1,0 +1,6 @@
+JSON.parse()
+If we had JSON we simply wrap it as the parameter of "parse()" and it will return an object
+
+
+JSON.stringify(obj)
+We can give stringify an object and it will return a string of JSON.

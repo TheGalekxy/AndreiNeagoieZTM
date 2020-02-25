@@ -23,9 +23,9 @@ fetch('https://jsonplaceholder.typicode.com/users')
     .then(console.log)
 
 async function fetchUsers() {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users') // fetch the api and then put it in the response variable
+    const response = await fetch('https://swapi.co/api/people/') // fetch the api and then put it in the response variable
     const data = await response.json(); // wait for the response variable then run it through json() and put that in the data variable
-    console.log(data) // console.log the data variable
+    console.log(data.results) // console.log the data variable
 }
 
 // Another example

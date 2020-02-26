@@ -16,17 +16,30 @@ class App extends Component {
 
     componentDidMount() {       
         
-        // async function fetchCharacters() {
-        //     const response = await fetch('https://swapi.co/api/people/')
-        //     const data = await response.json();
-        //     console.log(data.results);
-        //     .then((data.results) => {
-        //         this.setState({ people: data.results})
-        //         console.log(this.state.people)
-        //     })
-        //   }
-        
-        // fetchCharacters()
+        // const urls = [
+        //     'https://swapi.co/api/people/',
+        //     'https://swapi.co/api/people/?page=2',
+        //     'https://swapi.co/api/people/?page=3'
+        //   ]
+
+        //   const getData = async () => {
+        //       try {
+        //         const [ page1, page2, page3 ] = await Promise.all(urls.map(async function(url) {
+        //             const response = await fetch(url);
+        //             const json = await response.json();
+        //             this.setState({ people: json.results});
+        //         }));
+        //         console.log('page1', page1.results);
+        //         console.log('page2', page2.results);
+        //         console.log('page3', page3.results);
+        //       } catch (error) {
+        //           console.log(error);
+        //       }
+        //     }
+
+        //     getData()
+          
+
 
 
         fetch('https://swapi.co/api/people')
@@ -34,17 +47,9 @@ class App extends Component {
             .then((data) => {
                 this.setState({ people: data.results })
             })
-        
-        
-        // fetch('https://swapi.co/api/people/')
-        // .then(response => {
-        //     return response.json();
-        // })
-        // .then(characters => {
-        //     this.setState({people: characters})
-        // })
-        
     }
+    
+
 
     
 

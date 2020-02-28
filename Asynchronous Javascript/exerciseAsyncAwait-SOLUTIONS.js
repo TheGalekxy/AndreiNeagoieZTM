@@ -16,28 +16,29 @@ async function fetchStarship() {
 // So there shouldn't be any .then() calls anymore!
 // Don't get discouraged... this is a really tough one...
 const urls = [
-  'https://jsonplaceholder.typicode.com/users',
-  'https://jsonplaceholder.typicode.com/posts',
-  'https://jsonplaceholder.typicode.com/albums'
-]
+      'https://swapi.co/api/people/',
+      'https://swapi.co/api/people/?page=2',
+      'https://swapi.co/api/people/?page=3'
+    ]
+
+// const getData = async function() {
+//   const [ users, posts, albums ] = await Promise.all(urls.map(url =>
+//       fetch(url).then(resp => resp.json())
+//   ));
+//   console.log('users', users);
+//   console.log('posta', posts);
+//   console.log('albums', albums);
+// }
 
 const getData = async function() {
-  const [ users, posts, albums ] = await Promise.all(urls.map(url =>
-      fetch(url).then(resp => resp.json())
-  ));
-  console.log('users', users);
-  console.log('posta', posts);
-  console.log('albums', albums);
-}
-
-const getData = async function() {
-  const [ users, posts, albums ] = await Promise.all(urls.map(async function(url) {
+  const [ page1, page2, page3 ] = await Promise.all(urls.map(async function(url) {
       const response = await fetch(url);
-      return response.json();
+      const json = await response.json();
+      return json;
   }));
-  console.log('users', users);
-  console.log('posta', posts);
-  console.log('albums', albums);
+  console.log('page1', page1.results);
+  console.log('page2', page2.results);
+  console.log('page3', page3.results);
 }
 
 // #3)Add a try catch block to the #2 solution in order to catch any errors. // Now, use the given array containing an invalid url, so you console.log  //your error with 'oooooops'.

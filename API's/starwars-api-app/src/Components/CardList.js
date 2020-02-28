@@ -1,5 +1,5 @@
 import React from 'react';
-import { people } from './people'; // redundant because we destructure it below in the "const Cardlist"
+import { people } from '../people'; // redundant because we destructure it below in the "const Cardlist"
 import Card from './Card';
 
 const CardList = ({ people }) => {

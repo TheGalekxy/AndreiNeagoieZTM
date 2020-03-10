@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
-import Navigation from './Components/Navigation/Navigation';
+import Particles from 'react-particles-js';
+import Clarifai from 'clarifai';
 import FaceRecognition from './Components/FaceRecognition/FaceRecognition';
+import Navigation from './Components/Navigation/Navigation';
 import Logo from './Components/Logo/Logo';
 import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm';
 import Rank from './Components/Rank/Rank';
-import Particles from 'react-particles-js';
-import Clarifai from 'clarifai';
+import './App.css';
+
 
 const app = new Clarifai.App({
   apiKey: '9e9f4bb247574926b9e20ec4b7b8e0f6'
@@ -49,8 +50,8 @@ class App extends Component {
   }
 
   displayFaceBox = (box) => {
-    console.log(box);
     this.setState({box: box});
+    console.log(box, 'THIS IS BOX');
   }
 
   onInputChange = (event) => {
@@ -59,7 +60,10 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input})
-    app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
+    app.models
+    .predict(
+      Clarifai.FACE_DETECT_MODEL,
+      this.state.input)
     .then(response => this.displayFaceBox(this.calculateFaceLocation(response)))
     .catch(err => console.log(err));
   

@@ -1,0 +1,15 @@
+Relational Databases
+-they all follow the same standard format
+    -two or more tables with columns and rows
+    -the relationship between tables is called a schema
+    -in a Relational database the schema must be clearly defined before any info can be added
+    -username in the "tweets table" is the foreign key of the username in the "users table" **** FROM VIDEO ****
+    -primary key: are the labels of identification in each table
+-all relational databases use SQL, which allows us to communicate with the database
+
+NoSQL / Non Relation Database
+-lets you build an application without having to define a schema first
+-if your data requirements arent clear at the outset of your project then it would be better to go with a non relational database, a greater flexibility
+-mongoDB is Document Oriented: it stores information as Documents*******
+
+Databases are specific to your personal needs. For example, if you needed to find the average size of a tweet then a relational DB would be better because all the tweets are stored together, whereas in the non-relational they are split up into different files.

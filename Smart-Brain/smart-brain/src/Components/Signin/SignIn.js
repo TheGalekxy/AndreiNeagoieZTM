@@ -30,7 +30,7 @@ class SignIn extends React.Component {
         })
         .then(Response => Response.json())
         .then(user => {
-          if ( user.id) {
+          if (user.id) {
                 this.props.loadUser(user);
                 this.props.onRouteChange('home')
             }

@@ -17,10 +17,17 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-
-    <h1 class="text-uppercase"><strong> The biggest startup event of the year </strong></h1>
-    <hr>
-    <button class="btn btn-primary btn-xl"> Find out more </button>
-
+    <div class="container d-flex align-items-center h-100"> <!-- d-flex enables flexbox on the container -->
+      <div class="row">
+        <header class="text-center col-12"> <!-- col-12 takes up the whole width of the screen -->
+          <h1 class="text-uppercase"><strong> The biggest startup event of the year </strong></h1>
+        </header>
+        <div class="buffer col-12"></div>
+        <section class="text-center col-12">
+          <hr>
+          <a href="https://mailchi.mp/5cd0005b7b7d/startup"><button class="btn btn-primary btn-xl"> Find out more </button></a>
+        </section>
+      </div>
+    </div>
   </body>
 </html>

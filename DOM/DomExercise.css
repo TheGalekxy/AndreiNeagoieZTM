@@ -21,3 +21,7 @@
 .done {
   text-decoration: line-through;
 }
+
+.newItem {
+  background-color: gray;
+}

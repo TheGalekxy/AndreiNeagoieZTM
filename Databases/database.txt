@@ -13,3 +13,4 @@ NoSQL / Non Relation Database
 -mongoDB is Document Oriented: it stores information as Documents*******
 
 Databases are specific to your personal needs. For example, if you needed to find the average size of a tweet then a relational DB would be better because all the tweets are stored together, whereas in the non-relational they are split up into different files.
+

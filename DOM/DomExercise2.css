@@ -1,3 +1,19 @@
+* {
+  margin: 0px;
+}
+
+h1, p {
+  text-align: center;
+}
+
+div {
+  width: 15%;
+  margin: auto;
+}
+
+
+
+
 .coolTitle {
   text-align: center;
   font-family: 'Oswald', Helvetica, sans-serif;
@@ -25,10 +41,11 @@
 li {
   cursor: pointer;
   padding: 1px 1px 1px 1px;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
 }
 
 li button {
   position: absolute;
-    right: 1rem;
+    left: 70rem;
 }
+
